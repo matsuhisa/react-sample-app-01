@@ -17,8 +17,11 @@
     "firebase-functions": "^3.3.0"
   },
   "devDependencies": {
-    "typescript": "^3.2.2",
-    "firebase-functions-test": "^0.1.6"
+    "@types/jest": "^25.2.1",
+    "firebase-functions-test": "^0.1.6",
+    "jest": "^25.3.0",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.2.2"
   },
   "private": true
 }
