@@ -1,10 +1,12 @@
 {
   "name": "functions",
   "scripts": {
-    "build": "tsc",
+    "lint": "eslint 'src/**/*.{js,ts}'",
+    "build": "npm run lint && tsc",
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
+    "test": "jest",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
   },
@@ -33,5 +35,14 @@
     "ts-jest": "^25.3.1",
     "typescript": "^3.2.2"
   },
-  "private": true
+  "private": true,
+  "jest": {
+    "preset": "ts-jest",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts?|js?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "json",
+      "js"
+    ]
+  }
 }
